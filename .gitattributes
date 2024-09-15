@@ -1,1 +1,14 @@
+
+
+github reposunda bir tane proje oluşturup clone edin
+dd if=/dev/urandom of=random_file.bin bs=1M count=100 
+yukarıda ki komut ile 100 mbden büyük bir dosya oluşturun
+git add --all
+git commit -m "100 mb"
+
+burda large file hatası almanız gerek
+
+git lfs yi indirin
+.gitattributes uzantısında bir dosya oluşturun
 *.bin filter=lfs diff=lfs merge=lfs -text
+komutunu yazın tekrar push yapmayı deneyin (şimdi push yapması gerek)
